@@ -34,7 +34,6 @@ const VideoDetail = () => {
         <Box flex={1}>
           <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>
             <ReactPlayer
-              //className="react-pĺayer"
               url={`https://www.youtube.com/watch?v=${id}`}
               width="100%"
               height="77vh"
@@ -72,17 +71,15 @@ const VideoDetail = () => {
             </Stack>
           </Box>
         </Box>
+        <Box
+          px={2}
+          py={{ md: 1, xs: 5 }}
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Videos videos={videos} direction="column" />
+        </Box>
       </Stack>
-
-      <Box
-        px={2}
-        py={{ md: 1, xs: 5 }}
-        justifyContent="center"
-        alignItems="center"
-      >
-        {console.log(videos)}
-        {/* <Videos videos={videos} /> */}
-      </Box>
     </Box>
   );
 };
